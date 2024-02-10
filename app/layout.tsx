@@ -25,8 +25,6 @@ export default function RootLayout() {
 async function login() {
   "use server";
   const cookieStore = cookies();
-  const date = new Date();
-  date.setTime(date.getTime() + 60 * 60 * 1000);
   cookieStore.set({
     name: authCookieName,
     value: "John",
